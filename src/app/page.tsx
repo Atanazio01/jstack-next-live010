@@ -1,15 +1,12 @@
-//Server Component
-'use client';
+import Checkout from './Checkout';
+import { ListVehicles } from './ListVehicles';
 
-export default  function Home() {
+// Composition and Client Composition Pattern
 
-  console.log("appName");
-
+export default function Home() {
   return (
     <div>
-      <button onClick={() => alert('Ok')}>
-        Clicou
-      </button>
+      <Checkout list={<ListVehicles />}/>
     </div>
   );
 }
